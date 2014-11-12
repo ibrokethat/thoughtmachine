@@ -1,0 +1,10 @@
+<body>
+  <header>
+    ThoughtMachine wants to move you!
+  </header>
+  <nav>
+    <a href="/inventory">Inventory</a>
+    <a href="/manifest">Manifest</a>
+  </nav>
+  <div data-hook="page-container"></div>
+</body>

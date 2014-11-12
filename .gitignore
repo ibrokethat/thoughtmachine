@@ -18,10 +18,6 @@ venv
 *.bak*
 *.log
 
-config/runtime.json
-.elasticbeanstalk/
-
 logs/
 
-static/build
-lib
+static/build.js

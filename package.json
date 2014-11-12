@@ -5,15 +5,18 @@
   "author": "Simon Jefford <si@ibrokethat.com>",
   "dependencies": {
     "ampersand-collection": "^1.3.16",
+    "ampersand-dom": "^1.2.6",
     "ampersand-router": "^1.0.5",
     "ampersand-state": "^4.3.12",
     "ampersand-subcollection": "^1.4.5",
     "ampersand-view": "^7.1.4",
+    "ampersand-view-switcher": "^1.1.2",
     "config": "0.4.x",
     "debounce": "^1.0.0",
+    "domify": "^1.3.1",
+    "domready": "^1.0.7",
     "js-yaml": "3.2.x",
-    "koa": "x",
-    "koa-static": "x",
+    "node-static": "x",
     "underscore": "^1.6.0"
   },
   "devDependencies": {
@@ -31,7 +34,9 @@
   },
   "scripts": {
     "test": "node ./node_modules/mocha/bin/_mocha --colors --recursive --ui bdd --reporter spec ./test --NODE_ENV=test",
-    "build": "browserify js/app.js -t domthingify -o build/app.js",
-    "start": "watchify js/app.js -t domthingify -o build/app.js"
+    "build": "browserify src/app.js -t domthingify -o static/build.js",
+    "watch": "watchify src/app.js -t domthingify -o static/build.js -v --debug",
+    "start-dev": "node server.js",
+    "start": "npm run build && node server.js"
   }
 }
