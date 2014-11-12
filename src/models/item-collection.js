@@ -12,7 +12,7 @@ var rest = _.rest;
 var flatten = _.flatten;
 var where = _.where;
 
-module.exports = AmpCollection.extend({
+var ItemCollection = AmpCollection.extend({
 
   model: Item,
 
@@ -33,14 +33,14 @@ module.exports = AmpCollection.extend({
       return first(sortBy(room, 'weight').reverse(), 2);
     });
 
-    return flatten(rooms);
+    return new ItemCollection(flatten(rooms));
   },
 
 
   //  retrieve only the fragile items
   getFragileItems: function () {
 
-    return where(this.models, {fragile: true});
+    return new ItemCollection(where(this.models, {fragile: true}));
   },
 
 
@@ -53,8 +53,10 @@ module.exports = AmpCollection.extend({
       return where(rest(sortBy(room, 'weight').reverse(), 2), {fragile: false});
     });
 
-    return flatten(rooms);
+    return new ItemCollection(flatten(rooms));
   }
 
 
 });
+
+module.exports = ItemCollection;

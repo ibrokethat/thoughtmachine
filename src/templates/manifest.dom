@@ -1,0 +1,11 @@
+<div>
+  <header>
+    <h1>Manifest</h1>
+  </header>
+  <h2>Heaviest</h2>
+  <div data-hook="heaviest-item-container"></div>
+  <h2>Fragile</h2>
+  <div data-hook="fragile-item-container"></div>
+  <h2>Other</h2>
+  <div data-hook="other-item-container"></div>
+</div>

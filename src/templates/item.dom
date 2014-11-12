@@ -1,0 +1,8 @@
+<div class="inventory-item">
+
+  <div class="">{{model.room}}</div>
+  <div class="">{{model.description}}</div>
+  <div class="">{{model.weight}}</div>
+  <div class="">{{model.fragile}}</div>
+
+</div>

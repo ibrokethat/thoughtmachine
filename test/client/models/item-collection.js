@@ -12,7 +12,7 @@ var fixtures;
 var fakes;
 var underTest;
 
-var modulePath = 'client/models/item-collection';
+var modulePath = 'src/models/item-collection';
 var ItemCollection = rewire(path.resolve(modulePath));
 chai.use(sinonChai);
 
@@ -55,14 +55,14 @@ describe(modulePath, function() {
 
     it('should group, sort and limit the items in the collection', function () {
 
-      var items = underTest.getHeaviestItems();
+      var items = underTest.getHeaviestItems().toJSON();
 
-      expect(items[0].serialize()).to.deep.equal({room: 'bedroom 1', description: '', weight: 40, fragile: false});
-      expect(items[1].serialize()).to.deep.equal({room: 'bedroom 1', description: '', weight: 30, fragile: true});
-      expect(items[2].serialize()).to.deep.equal({room: 'bedroom 2', description: '', weight: 40, fragile: false});
-      expect(items[3].serialize()).to.deep.equal({room: 'bedroom 2', description: '', weight: 30, fragile: true});
-      expect(items[4].serialize()).to.deep.equal({room: 'bedroom 3', description: '', weight: 40, fragile: false});
-      expect(items[5].serialize()).to.deep.equal({room: 'bedroom 3', description: '', weight: 30, fragile: true});
+      expect(items[0]).to.deep.equal({room: 'bedroom 1', description: '', weight: 40, fragile: false});
+      expect(items[1]).to.deep.equal({room: 'bedroom 1', description: '', weight: 30, fragile: true});
+      expect(items[2]).to.deep.equal({room: 'bedroom 2', description: '', weight: 40, fragile: false});
+      expect(items[3]).to.deep.equal({room: 'bedroom 2', description: '', weight: 30, fragile: true});
+      expect(items[4]).to.deep.equal({room: 'bedroom 3', description: '', weight: 40, fragile: false});
+      expect(items[5]).to.deep.equal({room: 'bedroom 3', description: '', weight: 30, fragile: true});
 
     });
 
@@ -73,7 +73,7 @@ describe(modulePath, function() {
 
     it('should return only the fragile items', function () {
 
-      var items = underTest.getFragileItems();
+      var items = underTest.getFragileItems().toJSON();
 
       expect(items.length).to.be.equal(6);
 
@@ -91,7 +91,7 @@ describe(modulePath, function() {
 
     it('should only return those items which do not return in #getHeaviestItems and #getFragileItems', function () {
 
-      var items = underTest.getUncategorisedItems();
+      var items = underTest.getUncategorisedItems().toJSON();
 
       expect(items.length).to.be.equal(3);
 

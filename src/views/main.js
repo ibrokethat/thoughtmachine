@@ -10,12 +10,12 @@ var ViewSwitcher = require('ampersand-view-switcher');
 var _ = require('underscore');
 var domify = require('domify');
 var dom = require('ampersand-dom');
-var body = require('../templates/body.dom');
+var template = require('../templates/body.dom');
 
 
 module.exports = View.extend({
 
-  template: body,
+  template: template,
 
   initialize: function () {
     // this marks the correct nav item selected
