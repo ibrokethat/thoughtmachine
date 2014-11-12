@@ -4,6 +4,7 @@
   </header>
   <nav>
     <a href="/inventory">Inventory</a>
+    <a href="/inventory/add">Add an item to the Inventory</a>
     <a href="/manifest">Manifest</a>
   </nav>
   <div data-hook="page-container"></div>

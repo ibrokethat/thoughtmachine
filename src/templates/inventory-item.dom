@@ -1,0 +1,11 @@
+<div>
+  <header>
+    <h1>Add an item to the Inventory</h1>
+  </header>
+  <form data-hook="item-form">
+    <fieldset data-hook="field-container"></fieldset>
+    <div class="buttons">
+      <button data-hook="reset" type="submit">submit</button>
+    </div>
+  </from>
+</div>
