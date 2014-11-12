@@ -26,20 +26,21 @@
   },
   "devDependencies": {
     "assert": "*",
+    "browserify": "5.10.1",
     "chai": "*",
+    "domthing": "^0.3.1",
+    "domthingify": "^0.2.0",
     "mocha": "*",
     "rewire": "2.0.x",
     "should": "*",
     "sinon": "*",
     "sinon-chai": "*",
-    "browserify": "5.10.1",
-    "domthing": "^0.3.1",
-    "domthingify": "^0.2.0",
+    "uglifyify": "^2.6.0",
     "watchify": "^2.0.0"
   },
   "scripts": {
     "test": "node ./node_modules/mocha/bin/_mocha --colors --recursive --ui bdd --reporter spec ./test --NODE_ENV=test",
-    "build": "browserify src/app.js -t domthingify -o static/build.js",
+    "build": "browserify src/app.js -t domthingify -g [uglifyify -x .js] -o static/build.js",
     "watch": "watchify src/app.js -t domthingify -o static/build.js -v --debug",
     "start-dev": "node server.js",
     "start": "npm run build && node server.js"
