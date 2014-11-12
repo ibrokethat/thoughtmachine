@@ -25,6 +25,8 @@ var ItemCollection = AmpCollection.extend({
 
 
   //  retrieve the two heaviest items per room
+  //  wrapping the response in a new Collection may be better done using
+  //  a sub collection
   getHeaviestItems: function () {
 
     var rooms = groupBy(this.models, 'room');
@@ -38,6 +40,8 @@ var ItemCollection = AmpCollection.extend({
 
 
   //  retrieve only the fragile items
+  //  wrapping the response in a new Collection may be better done using
+  //  a sub collection
   getFragileItems: function () {
 
     return new ItemCollection(where(this.models, {fragile: true}));
@@ -45,6 +49,8 @@ var ItemCollection = AmpCollection.extend({
 
 
   //  retrieve the rest
+  //  wrapping the response in a new Collection may be better done using
+  //  a sub collection
   getUncategorisedItems: function () {
 
     var rooms = groupBy(this.models, 'room');

@@ -1,10 +1,12 @@
 'use strict';
 
 var View = require('ampersand-view');
-var ItemView = require('../views/item');
+var ItemView = require('../views/manifest-item');
 var template = require('../templates/manifest.dom');
 
 module.exports = View.extend({
+
+  pageTitle: 'Manifest',
 
   template: template,
 

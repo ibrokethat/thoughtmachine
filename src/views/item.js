@@ -5,6 +5,15 @@ var template = require('../templates/item.dom');
 
 module.exports = BaseView.extend({
 
-  template: template
+  template: template,
+
+  events: {
+    'click [data-hook~=delete]': 'deleteItem'
+  },
+
+  deleteItem: function () {
+
+    this.model.destroy();
+  }
 
 });

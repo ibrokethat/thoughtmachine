@@ -1,6 +1,6 @@
 <body>
   <header>
-    ThoughtMachine wants to move you!
+    <h1>ThoughtMachine wants to move you!</h1>
   </header>
   <nav>
     <a href="/inventory">Inventory</a>

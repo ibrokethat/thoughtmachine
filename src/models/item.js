@@ -37,15 +37,6 @@ module.exports = AmpState.extend({
   },
 
 
-  session: {
-
-    editing: {
-      type: 'boolean',
-      default: false
-    }
-
-  },
-
   destroy: function () {
 
     if (this.collection) {

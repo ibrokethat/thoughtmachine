@@ -3,11 +3,11 @@
 /*global app*/
 var View = require('ampersand-view');
 var ItemForm = require('../forms/item');
-var template = require('../templates/inventory-item.dom');
+var template = require('../templates/inventory-item-add.dom');
 
 module.exports = View.extend({
 
-  pageTitle: 'Add an item to the inventory',
+  pageTitle: 'Add an item to the Inventory',
   template: template,
   subviews: {
     form: {
@@ -15,6 +15,7 @@ module.exports = View.extend({
       prepareView: function (el) {
         return new ItemForm({
           el: el,
+
           submitCallback: function (data) {
 
             data = this.prepareData(data);

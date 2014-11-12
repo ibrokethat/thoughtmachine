@@ -7,6 +7,8 @@ var template = require('../templates/inventory.dom');
 
 module.exports = View.extend({
 
+  pageTitle: 'inventory',
+
   template: template,
 
   render: function () {
