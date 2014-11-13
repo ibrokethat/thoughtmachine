@@ -6,7 +6,7 @@ git clone git@github.com:ibrokethat/thoughtmachine.git
 
 cd thoughtmachine
 
-npm install dependencies
+npm install
 
 ## Start and build the app
 
