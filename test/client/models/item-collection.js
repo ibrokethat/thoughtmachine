@@ -66,6 +66,45 @@ describe(modulePath, function() {
 
     });
 
+    it('should aggregate correctly after the addition of new items', function () {
+
+      var items = underTest.getHeaviestItems().toJSON();
+
+      expect(items[0]).to.deep.equal({room: 'bedroom 1', description: '', weight: 40, fragile: false});
+      expect(items[1]).to.deep.equal({room: 'bedroom 1', description: '', weight: 30, fragile: true});
+      expect(items[2]).to.deep.equal({room: 'bedroom 2', description: '', weight: 40, fragile: false});
+      expect(items[3]).to.deep.equal({room: 'bedroom 2', description: '', weight: 30, fragile: true});
+      expect(items[4]).to.deep.equal({room: 'bedroom 3', description: '', weight: 40, fragile: false});
+      expect(items[5]).to.deep.equal({room: 'bedroom 3', description: '', weight: 30, fragile: true});
+
+      underTest.add({room: 'bedroom 1', description: '', weight: 200, fragile: false})
+
+      items = underTest.getHeaviestItems().toJSON();
+
+      expect(items[0]).to.deep.equal({room: 'bedroom 1', description: '', weight: 200, fragile: false});
+      expect(items[1]).to.deep.equal({room: 'bedroom 1', description: '', weight: 40, fragile: false});
+      expect(items[2]).to.deep.equal({room: 'bedroom 2', description: '', weight: 40, fragile: false});
+      expect(items[3]).to.deep.equal({room: 'bedroom 2', description: '', weight: 30, fragile: true});
+      expect(items[4]).to.deep.equal({room: 'bedroom 3', description: '', weight: 40, fragile: false});
+      expect(items[5]).to.deep.equal({room: 'bedroom 3', description: '', weight: 30, fragile: true});
+
+
+      underTest.add({room: 'kitchen', description: '', weight: 50, fragile: true})
+
+      items = underTest.getHeaviestItems().toJSON();
+
+      expect(items[0]).to.deep.equal({room: 'bedroom 1', description: '', weight: 200, fragile: false});
+      expect(items[1]).to.deep.equal({room: 'bedroom 1', description: '', weight: 40, fragile: false});
+      expect(items[2]).to.deep.equal({room: 'bedroom 2', description: '', weight: 40, fragile: false});
+      expect(items[3]).to.deep.equal({room: 'bedroom 2', description: '', weight: 30, fragile: true});
+      expect(items[4]).to.deep.equal({room: 'bedroom 3', description: '', weight: 40, fragile: false});
+      expect(items[5]).to.deep.equal({room: 'bedroom 3', description: '', weight: 30, fragile: true});
+      expect(items[6]).to.deep.equal({room: 'kitchen', description: '', weight: 50, fragile: true});
+
+
+    });
+
+
   });
 
 

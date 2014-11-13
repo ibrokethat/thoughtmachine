@@ -1,0 +1,27 @@
+
+.item {
+  display: inline-block;
+}
+
+.room {
+  width: 100px;
+}
+
+.description {
+  width: 200px;
+}
+
+.weight {
+  width: 40px;
+}
+
+.fragile {
+  width: 40px;
+}
+
+.action {
+  cursor: pointer;
+  color: blue;
+  width: 60px;
+  text-decoration: underline;
+}

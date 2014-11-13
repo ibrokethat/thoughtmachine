@@ -21,18 +21,18 @@ module.exports = {
     this.items = new ItemCollection();
 
     var fixtures = [
-      {room: 'bedroom 1', description: '', weight: 10, fragile: true},
-      {room: 'bedroom 1', description: '', weight: 30, fragile: true},
-      {room: 'bedroom 2', description: '', weight: 10, fragile: true},
-      {room: 'bedroom 1', description: '', weight: 20, fragile: false},
-      {room: 'bedroom 2', description: '', weight: 20, fragile: false},
-      {room: 'bedroom 3', description: '', weight: 30, fragile: true},
-      {room: 'bedroom 2', description: '', weight: 30, fragile: true},
-      {room: 'bedroom 3', description: '', weight: 40, fragile: false},
-      {room: 'bedroom 2', description: '', weight: 40, fragile: false},
-      {room: 'bedroom 1', description: '', weight: 40, fragile: false},
-      {room: 'bedroom 3', description: '', weight: 10, fragile: true},
-      {room: 'bedroom 3', description: '', weight: 20, fragile: false},
+      {room: 'bedroom 1', description: 'lamp', weight: 10, fragile: true},
+      {room: 'bedroom 1', description: 'shelf', weight: 20, fragile: false},
+      {room: 'bedroom 1', description: 'mirror', weight: 30, fragile: true},
+      {room: 'bedroom 1', description: 'bed', weight: 40, fragile: false},
+      {room: 'bedroom 2', description: 'lamp', weight: 10, fragile: true},
+      {room: 'bedroom 2', description: 'shelf', weight: 20, fragile: false},
+      {room: 'bedroom 2', description: 'mirror', weight: 30, fragile: true},
+      {room: 'bedroom 2', description: 'bed', weight: 40, fragile: false},
+      {room: 'bedroom 3', description: 'lamp', weight: 10, fragile: true},
+      {room: 'bedroom 3', description: 'shelf', weight: 20, fragile: false},
+      {room: 'bedroom 3', description: 'mirror', weight: 30, fragile: true},
+      {room: 'bedroom 3', description: 'bed', weight: 40, fragile: false},
     ];
 
     this.items.add(fixtures);

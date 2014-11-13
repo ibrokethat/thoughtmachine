@@ -27,10 +27,10 @@ npm test
  * add styling.
  * add API's and database layer.
  * refactor collection to use sub collections for the filtered data sets.
- * create sensible abstractions to replace duplicate code.
+ * create sensible abstractions to reduce duplicate boilerplate code.
  * write more tests :) I've only tested the logic for the collection as that is the only code I've written that isn't just wiring up instances of the framework classes.
  * use the enums in conf/default.yaml as opposed to hard coding them in the model and form.
-
+ * gracefully handle empty data sets in the views
 
 # Notes
 

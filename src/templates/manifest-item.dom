@@ -1,7 +1,7 @@
-<div class="inventory-item">
+<div class="manifest-item">
 
-  <div class="">{{model.room}}</div>
-  <div class="">{{model.description}}</div>
-  <div class="">{{model.weight}}</div>
+  <div class="item room">{{model.room}}</div>
+  <div class="item description">{{model.description}}</div>
+  <div class="item weight">{{model.weight}}</div>
 
 </div>

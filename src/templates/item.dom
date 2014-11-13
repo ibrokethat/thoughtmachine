@@ -1,10 +1,10 @@
 <div class="inventory-item">
 
-  <div class="">{{model.room}}</div>
-  <div class="">{{model.description}}</div>
-  <div class="">{{model.weight}}</div>
-  <div class="">{{model.fragile}}</div>
-  <div class=""><a href="/inventory/{{model.cid}}">Edit</a></div>
-  <div class="" data-hook="delete">Delete</div>
+  <div class="item room">{{model.room}}</div>
+  <div class="item description">{{model.description}}</div>
+  <div class="item weight">{{model.weight}}</div>
+  <div class="item fragile">{{model.fragile}}</div>
+  <div class="item action"><a href="/inventory/{{model.cid}}">Edit</a></div>
+  <div class="item action" data-hook="delete">Delete</div>
 
 </div>
