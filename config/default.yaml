@@ -1,0 +1,11 @@
+app:
+  port: 3030
+enums:
+  rooms:
+    - 'master bedroom',
+    - 'bedroom 1',
+    - 'bedroom 2',
+    - 'bedroom 3',
+    - 'kitchen',
+    - 'living room',
+    - 'bathroom'
